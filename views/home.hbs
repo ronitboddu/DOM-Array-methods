@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div class="container">
+        <div class='header'>DOM Array Methods</div>
+        <form class="sidebar box" action="/" method="post">
+            <button type="submit" id="add_user" name="button_id" value="add_user">Add User</button>
+            <button type="submit" id="double_money" name="button_id" value="double_money">Double Money</button>
+            <button type="submit" id="million" name="button_id" value="million">Show Only Millionaires</button>
+            <button type="submit" id="richest" name="button_id" value="richest">Sort by Richest</button>
+            <button type="submit" id="calculate" name="button_id" value="calculate">Calculate entire wealth</button>
+        </form>
+        <div class="records box">
+            <div class="person_header">
+                <span class="person_h1"  id="unique">Person</span>
+                <span>Wealth</span>
+            </div>
+            {{#each arr}}
+            <div class="person_record first">
+                <span class="person_name">{{name}}</span>
+                <span class="person_wealth">{{wealth}}</span>
+            </div>
+            {{/each}}
+            {{#if total.status}}
+            <div class="total_wealth">
+                <span class="total_text">Total Wealth</span>
+                <span class="calculated_total">{{total.sum}}</span>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+   <!--<script src='/css/click.js'></script>-->
+</body>
+</html>

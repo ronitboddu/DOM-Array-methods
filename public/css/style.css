@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before
+{
+    box-sizing: inherit;
+}
+
+
+.container{
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+    grid-template-columns: 30px repeat(9,1fr);
+    grid-template-rows: 70px minmax(300px,auto);
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd"
+    "sd sd sd sd rd rd rd rd rd rd";
+    gap:25px 5px;
+}
+
+.header{
+    grid-area: hd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.sidebar{
+    grid-area: sd;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: flex-end;*/
+    align-items: flex-end;
+}
+
+.records{
+    grid-area: rd;
+    display: grid;
+    grid-template-rows: 60px repeat(auto-fill,30px);
+    border-left: 1px solid black;
+}
+
+
+
+/*.box{
+    border: 1px solid black;
+}*/
+
+button{
+    cursor: pointer;
+    width: 170px;
+    height: 40px;
+    border:1px solid black;
+    border-radius: 4px;
+    margin :10px;
+}
+
+.person_header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin:10px;
+    /*margin-top: 8px;*/
+    /*margin-bottom: 15px;*/
+    font-size: 25px;
+    /*border : 1px solid black;*/
+}
+
+.person_record{
+    display: flex;
+    justify-content: space-between;
+    /*border : 1px solid red;*/
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 1px 8px 1px 8px;
+    align-items: center;
+}
+
+/*.person_record.first{
+    margin-top: 10px;
+}*/
+
+.person_h1{
+    font-weight: bolder;
+}
+
+.person_name,.calculated_total{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person_wealth,.total_text{
+    font-size: 20px;
+}
+
+.total_wealth{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px 8px 1px 8px;
+    border-bottom: 1px solid black;
+}
